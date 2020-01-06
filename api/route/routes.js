@@ -1,6 +1,6 @@
 module.exports = function(app){
     var todoList = require('../controller/controller')
-    app.route('/task')
+    app.route('/tasks')
       .get(todoList.get_all_tasks)
       .post(todoList.create_a_task);
     app.route('/tasks/:taskId')

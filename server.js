@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose')
-task = require('./api/model/model')
+require('./api/model/model')
 
 //thiết lập connection
 mongoose.connect('mongodb://localhost/task', {
