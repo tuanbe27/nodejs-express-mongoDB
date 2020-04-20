@@ -9,7 +9,7 @@ exports.get_all_tasks = function(req, res){
 }
 exports.read_a_task = function(req, res){
 
-    task.findById(req.params.taskId, function(err, data){
+    task.findById(req.params.id, function(err, data){
         if(err) throw err
         res.json(data)
     })
@@ -25,13 +25,13 @@ exports.create_a_task = function(req, res){
 };
 
 exports.update_a_task = function (req, res){
-  task.findByIdAndUpdate(req.params.taskid, req.body, {new: true}, function(err, data){
+  task.findByIdAndUpdate(req.params.id, req.body, {new: true}, function(err, data){
     if (err) throw err
     res.json(data)
   })
 }
 exports.delete_a_task = function(req, res){
-  task.findByIdAndDelete(req.params.taskid, function(err){
+  task.findByIdAndDelete(req.params.id, function(err){
     if(err) throw err
     res.send("deleted")
   })
