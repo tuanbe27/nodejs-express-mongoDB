@@ -21,6 +21,6 @@ var route = require('./api/route/routes')
 route(app);
 
 // lắng nghe các kết nối trên máy chủ và cổng được chỉ định
-app.listen(3001, ()=> {
-    console.log("connected to port 3001")
+app.listen(3000, ()=> {
+    console.log("connected to port 3000")
 })
